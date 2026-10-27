@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; Join Us | Kingdom Crew Fellowship UNILAK Rwamagana</title>
+  <meta name="description" content="Join Kingdom Crew Fellowship or get in touch. Meet us every Sunday 4:30 PM to 7:00 PM at the Former Exam Hall, UNILAK Rwamagana Campus. Email kingdomcrew.unilak@gmail.com.">
+  <meta property="og:title" content="Join &amp; Contact — Kingdom Crew Fellowship">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3d2314">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kaushan+Script&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Join &amp; Contact</h1>
+        <p>We would love to meet you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="join">
+      <div class="container split" style="align-items:start">
+        <div>
+          <span class="eyebrow">Join Our Fellowship</span>
+          <h2>You are welcome here</h2>
+          <p>Every student at UNILAK is invited. Just come along on Sunday, or reach out first if you have questions.</p>
+          <ul class="meta" style="font-size:1rem">
+            <li>🕒 <strong data-kcf="meeting">Every Sunday, 4:30 PM – 7:00 PM</strong></li>
+            <li>📍 <span data-kcf="venue">Former Exam Hall, UNILAK Rwamagana Campus</span></li>
+            <li>✉️ <a data-kcf="email" href="#">kingdomcrew.unilak@gmail.com</a></li>
+            <li>📞 <span data-kcf="phones"></span></li>
+          </ul>
+          <div class="btn-row" style="margin:1.5rem 0"><a class="btn btn-gold" href="#" data-whatsapp>Join WhatsApp Community</a></div>
+          <h3>Connect With Us</h3>
+          <div data-social></div>
+        </div>
+
+        <div class="card">
+          <h2 style="font-size:1.5rem">Send us a message</h2>
+          <form class="form" id="contact-form" novalidate>
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required><div class="err" id="err-name" role="alert"></div></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><div class="err" id="err-email" role="alert"></div></div>
+            <div class="field">
+              <label for="category">What is this about?</label>
+              <select id="category" name="category">
+                <option value="general">General question</option>
+                <option value="membership">Joining the fellowship</option>
+                <option value="events">Events</option>
+                <option value="prayer">Prayer request</option>
+                <option value="partnership">Partnership or outreach</option>
+                <option value="technical">Website problem</option>
+              </select>
+            </div>
+            <div class="field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" required><div class="err" id="err-subject" role="alert"></div></div>
+            <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea><div class="err" id="err-message" role="alert"></div></div>
+            <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <div class="field">
+              <label class="checkbox"><input type="checkbox" name="consent"> <span>I agree that Kingdom Crew Fellowship may contact me by email about this message.</span></label>
+              <div class="err" id="err-consent" role="alert"></div>
+            </div>
+            <div class="form-status" id="form-status" role="status"></div>
+            <button class="btn btn-dark" type="submit">Send message</button>
+          </form>
+          <p style="font-size:.82rem;color:var(--brown-soft);margin:1rem 0 0">Messages are stored privately for fellowship leaders. Please do not include sensitive personal details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/scriptures.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

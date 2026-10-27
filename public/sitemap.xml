@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace YOUR-SITE-ADDRESS with your real address, e.g. https://yourname.github.io/kingdom-crew -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-SITE-ADDRESS/index.html</loc></url>
+  <url><loc>https://YOUR-SITE-ADDRESS/about.html</loc></url>
+  <url><loc>https://YOUR-SITE-ADDRESS/activities.html</loc></url>
+  <url><loc>https://YOUR-SITE-ADDRESS/events.html</loc></url>
+  <url><loc>https://YOUR-SITE-ADDRESS/bible.html</loc></url>
+  <url><loc>https://YOUR-SITE-ADDRESS/gallery.html</loc></url>
+  <url><loc>https://YOUR-SITE-ADDRESS/contact.html</loc></url>
+</urlset>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Read the Bible Online with Book Summaries | Kingdom Crew Fellowship</title>
+  <meta name="description" content="Read the Bible online, explore short summaries of all 66 books, and ask the Kingdom Crew AI assistant about Scripture.">
+  <meta property="og:title" content="Bible Reader — Kingdom Crew Fellowship">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3d2314">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kaushan+Script&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="bible">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>The Bible</h1>
+        <p>Read Scripture, get a short overview of every book, and ask questions with the AI assistant.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" id="bible-app">
+        <div class="bible-layout">
+          <aside class="bible-panel">
+            <div class="bible-controls">
+              <div class="field"><label for="book">Book</label><select id="book"></select></div>
+              <div class="field"><label for="chapter">Chapter</label><select id="chapter"></select></div>
+              <div class="field">
+                <label for="translation">Translation</label>
+                <select id="translation">
+                  <option value="web">World English Bible (WEB)</option>
+                  <option value="kjv">King James Version (KJV)</option>
+                  <option value="bbe">Bible in Basic English (BBE)</option>
+                </select>
+              </div>
+              <button type="button" class="btn btn-dark" id="read-btn">Read chapter</button>
+            </div>
+            <div class="book-summary" id="book-summary" aria-live="polite"></div>
+            <form id="search-form" class="field" style="margin-top:1rem">
+              <label for="passage-search">Find a passage</label>
+              <input id="passage-search" type="text" placeholder="e.g. John 3:16 or Psalm 23" autocomplete="off">
+            </form>
+            <p style="font-size:.85rem;margin:.8rem 0 0">Quick passages</p>
+            <div class="chips" id="quick"></div>
+          </aside>
+
+          <article class="bible-panel reader" id="reader" aria-live="polite"></article>
+        </div>
+
+        <h2 style="margin-top:3rem">All 66 books</h2>
+        <p>Choose a book to see its summary and begin reading.</p>
+        <div class="book-index" id="book-index"></div>
+        <p class="notice" style="margin-top:2rem">Book summaries are brief study aids written for orientation. They are not official fellowship teaching. Scripture text is loaded live from a free third-party service, so it needs an internet connection.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/scriptures.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
