@@ -178,13 +178,19 @@
       if (r.ok) {
         const { events } = await r.json();
         if (events && events.length) {
-          const fmt = (d) => new Date(d);
-          list = events.map((e) => ({
-            title: e.title, description: e.description || '', category: e.category || 'Fellowship',
-            venue: e.venue || 'To be confirmed', sample: false,
-            date: fmt(e.starts_at).toLocaleDateString(undefined, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }),
-            time: fmt(e.starts_at).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' }),
-          }));
+          // Times arrive as "YYYY-MM-DD HH:MM:SS" and are shown exactly as stored (Rwanda time),
+          // whatever time zone the visitor is in.
+          const fmt = (s) => { const [y, mo, d, h, mi] = String(s).split(/[-T: .]/).map(Number); return new Date(y, mo - 1, d, h, mi); };
+          const tm = (dt) => dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+          list = events.map((e) => {
+            const start = fmt(e.starts_at);
+            return {
+              title: e.title, description: e.description || '', category: e.category || 'Fellowship',
+              venue: e.venue || 'To be confirmed', sample: false,
+              date: start.toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }),
+              time: tm(start) + (e.ends_at ? ' – ' + tm(fmt(e.ends_at)) : ''),
+            };
+          });
         }
       }
     } catch (_) { /* offline or no backend: use config.js */ }

@@ -28,6 +28,7 @@ function getPool() {
     waitForConnections: true,
     connectionLimit: 5,
     connectTimeout: 10000,
+    dateStrings: true, // return event times exactly as stored, with no time zone shifting
   });
   return pool;
 }
