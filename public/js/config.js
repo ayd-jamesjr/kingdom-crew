@@ -30,7 +30,7 @@ window.KCF_CONFIG = {
     instagram: { label: 'Instagram', url: '', hint: '@kingdomcrew.unilak (to be confirmed)' },
     tiktok:    { label: 'TikTok',    url: '', hint: '@kingdomcrew.unilak (to be confirmed)' },
     youtube:   { label: 'YouTube',   url: '', hint: 'Kingdom Crew Fellowship (Channel)' },
-    whatsapp:  { label: 'WhatsApp Community', url: '', hint: 'Existing community invite link' },
+    whatsapp:  { label: 'WhatsApp Community', url: 'https://chat.whatsapp.com/J2cefbJjeyB5vjQvc4KNkM?s=sw&p=a&mlu=4&ilr=4&iam=2', hint: 'Existing community invite link' },
   },
 
   // ---- Events -------------------------------------------------------------
