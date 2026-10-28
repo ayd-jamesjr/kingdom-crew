@@ -12,7 +12,7 @@ window.KCF_CONFIG = {
 
   // ---- Contact (confirmed by the fellowship) -----------------------------
   email: 'kingdomcrew.unilak@gmail.com',
-  phones: ['0791377615', '0794242323'],
+  phones: ['0796396448', '0791377615'],
   venue: 'Former Exam Hall, UNILAK Rwamagana Campus',
   meeting: { day: 'Every Sunday', time: '4:30 PM – 7:00 PM' },
 
