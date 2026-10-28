@@ -156,8 +156,9 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
       body: JSON.stringify({
         model,
         messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
-        max_tokens: 400,
+        max_tokens: 1500,
         temperature: 0.5,
+        ...(model.startsWith('openai/gpt-oss') ? { reasoning_effort: 'low' } : {}),
       }),
     });
   }
@@ -167,7 +168,7 @@ app.post('/api/chat', chatLimiter, async (req, res) => {
     // Try the main model; if it is rate-limited (429) or the provider errors (5xx), try the fallback once.
     for (const model of models) {
       r = await callModel(model);
-      if (r.ok || (r.status !== 429 && r.status < 500)) break;
+      if (r.ok || (r.status !== 429 && r.status !== 404 && r.status < 500)) break;
       console.error(`AI model ${model} returned ${r.status}, trying fallback if any`);
     }
     if (!r.ok) {
